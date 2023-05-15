@@ -1,4 +1,5 @@
 #include <variant.hh>
+#include <variflect.hh>
 #include <iostream>
 
 using namespace variflect;
@@ -30,4 +31,6 @@ int main() {
   std::cout << " === After === " << std::endl;
   std::cout << converted.ToJSON() << std::endl;
 
+  VariflectGen gen("../test/test_codegen.hh");
+  gen.GenerateCode();
 }
